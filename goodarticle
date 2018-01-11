@@ -1,0 +1,54 @@
+ YII对象结果转为数组或直接输入JSON格式    //-------   YII对象结果转为数组或直接输入JSON格式
+2014-09-03 13:51 8709人阅读 评论(0) 收藏 举报
+分类：
+YII学习日志（61） php（1）
+
+版权声明：本文为博主原创文章，未经博主允许不得转载。
+
+转换为数组组的方法
+
+使用Yii 的Active Record 来获取查询结果的时候，返回的结果集是一个对象类型的，有时候为了数据处理的方便希望能够转成数组返回。比如下面的方法：
+
+[php] view plain copy
+
+    // 查找满足指定条件的结果中的第一行  
+    $post=Post::model()->find($condition,$params);  
+    // 查找具有指定主键值的那一行  
+    $post=Post::model()->findByPk($postID,$condition,$params);  
+    // 查找具有指定属性值的行  
+    $post=Post::model()->findByAttributes($attributes,$condition,$params);  
+
+
+返回一条结果的时候直接用 $post->attributes; 就可以了。
+
+如果要返回FindAll数组呢,要怎么处理呢
+
+有两种方法:
+
+第一种是使用自定义的函数,如下
+
+[php] view plain copy
+
+    /** 
+     * 简化findall数据 
+     * */  
+    function simplifyData($data){  
+        foreach($data as $key=>$val){  
+            $newData[$key] = $val->attributes;  
+        }  
+        return $newData;  
+    }  
+
+然后使用函数直接转换结果
+
+第二种是使用很简单的方法:
+
+[html] view plain copy
+
+    $products = ProTuan::model()->findAll($criteria);  
+    $products = json_decode(CJSON::encode($products),TRUE);  
+
+
+作用是就先将findAll结果先转成JSON格式,然后再转为数组.
+
+至于findALL转为JOSN格式其实就是使用

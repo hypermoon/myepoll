@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1464586502 source:/home/anson/Desktop/TestEpoll/tepoll/TcpServer.cpp
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	"TcpServer.h"
+	<stdio.h>
+	<unistd.h>
+	<string.h>
+
+1464586526 /home/anson/Desktop/TestEpoll/tepoll/TcpServer.h
+	"command_define.h"
+	<set>
+	<list>
+	<sys/select.h>
+	<pthread.h>
+
+1464586518 /home/anson/Desktop/TestEpoll/tepoll/command_define.h
+	<stddef.h>
+
+1464586485 source:/home/anson/Desktop/TestEpoll/tepoll/test.cpp
+	<iostream>
+	"TcpServer.h"
+	<stdio.h>
+	<unistd.h>
+
+1465377961 source:/home/anson/Desktop/May30/tepoll/TcpServer.cpp
+	<sys/types.h>
+	<sys/stat.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	"TcpServer.h"
+	<stdio.h>
+	<unistd.h>
+	<string.h>
+
+1465363057 /home/anson/Desktop/May30/tepoll/TcpServer.h
+	"command_define.h"
+	<set>
+	<list>
+	<sys/select.h>
+	<pthread.h>
+
+1464586518 /home/anson/Desktop/May30/tepoll/command_define.h
+	<stddef.h>
+
+1464586485 source:/home/anson/Desktop/May30/tepoll/test.cpp
+	<iostream>
+	"TcpServer.h"
+	<stdio.h>
+	<unistd.h>
+
+1482478720 source:/home/anson/Desktop/SingleOK/tepoll/TcpServer.cpp
+	<sys/types.h>
+	<sys/stat.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<netinet/in.h>
+	"TcpServer.h"
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<error.h>
+	<errno.h>
+	<sys/select.h>
+	<libpq-fe.h>
+
+1482388649 /home/anson/Desktop/SingleOK/tepoll/TcpServer.h
+	"command_define.h"
+	<set>
+	<list>
+	<time.h>
+	<sys/select.h>
+	<pthread.h>
+
+1476762362 /home/anson/Desktop/SingleOK/tepoll/command_define.h
+	<stddef.h>
+
+1476762371 source:/home/anson/Desktop/SingleOK/tepoll/test.cpp
+	<iostream>
+	"TcpServer.h"
+	<stdio.h>
+	<unistd.h>
+
